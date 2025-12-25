@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Kontaktet e Mia</title>
+
+    <style>
+
+        body {
+
+            background-color: #f2f2f2;
+
+            font-family: Arial, sans-serif;
+
+            text-align: center;
+
+        }
+
+        nav {
+
+            background-color: black;
+
+            padding: 10px;
+
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin: 15px;
+
+            font-weight: bold;
+
+        }
+
+        nav a:hover {
+
+            color: yellow;
+
+        }
+
+        .box {
+
+            background-color: white;
+
+            width: 400px;
+
+            margin: 50px auto;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px gray;
+
+        }
+
+        input {
+
+            padding: 5px;
+
+            width: 80%;
+
+            margin-top: 10px;
+
+        }
+
+        #mesazhi {
+
+            margin-top: 10px;
+
+            font-weight: bold;
+
+            color: green;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav>
+
+        <a href="aboutme.html">Rreth Meje</a>
+
+        <a href="hobet.html">Hobit e Mia</a>
+
+        <a href="kontakt.html">Kontaktet e Mia</a>
+
+        <a href="index.html">Faqja Kryesore</a>
+
+    </nav>
+
+
+
+    <div class="box">
+
+        <h2>Kontaktet e Mia</h2>
+
+        <p>Email: Jasharifatlind@gmail.com</p>
+
+        <p>Instagram: Fatlind Jashari</p>
+
+        <p>Facebook: Fatlind.J</p>
+
+        <p><b>Faleminderit që vizitove faqen time!</b></p>
+
+
+
+        <h3>Shkruaj emrin tënd:</h3>
+
+        <input type="text" id="emriInput" placeholder="Shkruaj emrin këtu">
+
+        <p id="mesazhi"></p>
+
+    </div>
+
+
+
+    
+
+    <script>
+
+        const input = document.getElementById('emriInput');
+
+        const mesazhi = document.getElementById('mesazhi');
+
+
+
+        input.addEventListener('keydown', function(e) {
+
+            if (e.key === 'Enter') {
+
+                e.preventDefault();
+
+                const emri = input.value.trim();
+
+                if (emri !== "") {
+
+                    mesazhi.textContent = "Faleminderit, " + emri + "!";
+
+                    input.value = "";
+
+                } else {
+
+                    mesazhi.textContent = "Ju lutem shkruani emrin tuaj.";
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html
+
